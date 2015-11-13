@@ -1,0 +1,22 @@
+inherit gnome2
+
+NAME="gsound"
+VERSION=1.0.2
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="GObject wrapper for libcanberra"
+DESCRIPTION="GSound is a small library for playing system sounds. It is designed
+to be used via GObject Introspection, and is a thin wrapper around libcanberra."
+
+PATCH_URI="1.0.2-no-undefined.patch"
+
+PKG_NAMES="gsound libgsound0 libgsound-devel libgsound-doc
+	   girepository-GSound1.0 vala-gsound"
+gsound_CATEGORY="Audio"
+gsound_CONTENTS="usr/bin/gsound-play.exe usr/share/doc/"
+libgsound0_CONTENTS="usr/bin/cyggsound-0.dll"
+libgsound_devel_CONTENTS="usr/include/ usr/lib/libgsound.dll.a usr/lib/pkgconfig/"
+libgsound_doc_CATEGORY="Doc"
+libgsound_doc_CONTENTS="usr/share/gtk-doc/html/gsound/"
+girepository_GSound1_0_CONTENTS="usr/*/gir*-1.0/GSound-1.0.*"
+vala_gsound_CONTENTS="usr/share/vala/vapi/gsound.*"
